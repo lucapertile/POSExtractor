@@ -22,10 +22,7 @@ import java.util.stream.Collectors;
  * a) find constraint for the feature weights and 
  * b) solve the optimisation problem by finding the maximum likelihoo estimation of the parameters, that in this case will give also the Maximum entropy model
  * 
- * Unfortunately in the timeframe provided I have not been able to implement the full solution that included the optimisation of the weights from training data.
- * However I have managed to write the skeleton of a strategy pattern that allows to implement different optimisation algorithms to solve the maximum likelihood problem.
- * Without an optimal set of weights I have temporarily set the weights manually using some trial and error heuristics. This of course impacts negatively on the quality of the results provided by this program as it is now.
- * 
+ *
  * The design behind this application has been focused in building an extensible framework that allows to add different tokenisers(via a factory on TokeniserFactory.java)
  * and also that allows different training strategies (via strategy pattern on TrainingStrategy/TrainingModel.java). 
  * On top of this it is possible to ad additional features by adding functional interfaces to Features.java. 
